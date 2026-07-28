@@ -3,7 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Integral Therapeutics — Biscayne Park, FL</title>
+<title>Integral Therapeutics — Greater Miami Area</title>
+<link rel="icon" type="image/png" href="icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
@@ -14,9 +15,9 @@
     --teal-mid:     #2a5252;
     --teal-soft:    #3d6b6b;
     --teal-mist:    #e8f0ef;
-    --gold:         #b8923a;
-    --gold-light:   #d4ac5a;
-    --gold-pale:    #f0e6cc;
+    --gold:         #7d5520;
+    --gold-light:   #9c6e2e;
+    --gold-pale:    #ede3d4;
     --cream:        #f7f3ec;
     --cream-dark:   #ede7db;
     --text-dark:    #1a2626;
@@ -49,7 +50,20 @@
     border-bottom: 1px solid rgba(184,146,58,0.2);
   }
 
+  .logo-mark {
+    display: inline-block;
+    background: url(logo.png) center / contain no-repeat;
+    flex-shrink: 0;
+  }
+
+  .nav-logo { width: 40px; height: 40px; }
+
+  .footer-logo { width: 64px; height: 64px; opacity: 0.9; }
+
   .nav-brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
     font-family: 'Cormorant Garamond', serif;
     font-size: 1.2rem;
     font-weight: 500;
@@ -77,19 +91,24 @@
   .nav-links a:hover { color: var(--gold-light); }
 
   .nav-cta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    white-space: nowrap;
     font-size: 0.78rem;
     font-weight: 500;
     letter-spacing: 0.1em;
     text-transform: uppercase;
-    color: var(--teal-deep) !important;
-    background: var(--gold-light);
+    color: var(--cream) !important;
+    background: var(--gold);
     padding: 0.55rem 1.4rem;
     border-radius: 100px;
     text-decoration: none;
     transition: background 0.25s;
   }
 
-  .nav-cta:hover { background: var(--gold) !important; color: var(--cream) !important; }
+  .nav-cta:hover { background: var(--gold-light) !important; color: var(--cream) !important; }
 
   /* ─── HERO ─── */
   .hero {
@@ -130,6 +149,21 @@
     pointer-events: none;
   }
 
+  .hero-brand-row {
+    display: flex;
+    align-items: center;
+    gap: 2.5rem;
+    margin-bottom: 2rem;
+    animation: fadeUp 0.7s ease 0.4s both;
+  }
+
+  .hero-logo {
+    width: 190px;
+    height: 190px;
+    background: url(logo-hero.webp) center / contain no-repeat;
+    flex-shrink: 0;
+  }
+
   .hero-content {
     display: flex;
     flex-direction: column;
@@ -161,11 +195,10 @@
 
   .hero-title {
     font-family: 'Cormorant Garamond', serif;
-    font-size: clamp(3.2rem, 5.5vw, 5.5rem);
+    font-size: clamp(2rem, 2.7vw, 3rem);
     font-weight: 300;
-    line-height: 1.05;
+    line-height: 1.3;
     color: var(--cream);
-    margin-bottom: 2rem;
     letter-spacing: -0.01em;
   }
 
@@ -185,7 +218,7 @@
 
   .hero-actions {
     display: flex;
-    gap: 1rem;
+    gap: 2.25rem;
     flex-wrap: wrap;
     align-items: center;
   }
@@ -195,7 +228,7 @@
     align-items: center;
     gap: 0.5rem;
     background: var(--gold);
-    color: var(--teal-deep);
+    color: var(--cream);
     font-size: 0.82rem;
     font-weight: 500;
     letter-spacing: 0.1em;
@@ -489,8 +522,62 @@
     font-weight: 300;
     line-height: 1.75;
     color: rgba(247,243,236,0.6);
-    margin-bottom: 1.75rem;
+    margin-bottom: 0;
   }
+
+  .service-card-cta {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 1rem;
+    margin-top: 1.75rem;
+    padding-top: 1.25rem;
+    border-top: 1px solid rgba(184,146,58,0.15);
+  }
+
+  .book-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: var(--gold);
+    color: var(--cream);
+    font-size: 0.78rem;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 0.6rem 1.4rem;
+    border-radius: 100px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+
+  .book-btn .book-icon { font-size: 1rem; line-height: 1; }
+
+  .book-btn:hover {
+    background: var(--gold-light);
+    box-shadow: 0 0 20px rgba(156,110,46,0.75), 0 0 44px rgba(156,110,46,0.35);
+    transform: translateY(-1px);
+  }
+
+  .services-contact {
+    text-align: center;
+    margin-top: 3rem;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.35rem;
+    font-style: italic;
+    color: rgba(247,243,236,0.85);
+    position: relative;
+    z-index: 2;
+  }
+
+  .services-contact a {
+    color: var(--gold-light);
+    text-decoration: none;
+    border-bottom: 1px solid rgba(156,110,46,0.4);
+    transition: border-color 0.2s;
+  }
+
+  .services-contact a:hover { border-color: var(--gold-light); }
 
   .service-card-price {
     display: flex;
@@ -631,7 +718,7 @@
 
   .info-block-content a:hover { border-color: var(--teal-soft); }
 
-  .info-map-placeholder {
+  .info-map {
     background: var(--teal-mist);
     border: 1px solid rgba(42,82,82,0.12);
     border-radius: 1.5rem;
@@ -641,28 +728,24 @@
     align-items: center;
     justify-content: center;
     gap: 0.75rem;
-    color: var(--text-light);
-    font-size: 0.82rem;
     position: sticky;
     top: 6rem;
   }
 
-  .info-map-placeholder svg {
+  .info-map svg {
     width: 36px;
     height: 36px;
-    stroke: var(--teal-soft);
-    fill: none;
-    stroke-width: 1.5;
+    fill: var(--teal-soft);
   }
 
-  .info-map-placeholder span {
+  .info-map span {
     color: var(--text-mid);
     font-family: 'Cormorant Garamond', serif;
     font-size: 1.1rem;
     font-style: italic;
   }
 
-  .info-map-placeholder small {
+  .info-map small {
     font-size: 0.75rem;
     color: var(--text-light);
     text-align: center;
@@ -718,6 +801,19 @@
   .hero-actions  { animation: fadeUp 0.7s ease 0.7s both; }
   .hero-card     { animation: fadeUp 0.7s ease 0.6s both; }
 
+  /* ─── SCROLL REVEAL ─── */
+  .reveal { opacity: 0; }
+  .reveal.visible { animation: fadeUp 0.75s ease both; }
+  .services-grid .service-card.visible:nth-child(2) { animation-delay: 0.12s; }
+  .services-grid .service-card.visible:nth-child(3) { animation-delay: 0.24s; }
+  .services-grid .service-card.visible:nth-child(4) { animation-delay: 0.36s; }
+
+  @media (prefers-reduced-motion: reduce) {
+    .reveal { opacity: 1; }
+    .reveal.visible { animation: none; }
+    html { scroll-behavior: auto; }
+  }
+
   /* ─── MOBILE ─── */
   @media (max-width: 900px) {
     nav { padding: 1rem 1.5rem; }
@@ -725,6 +821,8 @@
 
     .hero { grid-template-columns: 1fr; min-height: auto; }
     .hero-content { padding: 7rem 1.75rem 3rem; }
+    .hero-brand-row { gap: 1.25rem; }
+    .hero-logo { width: 110px; height: 110px; }
     .hero-visual { padding: 0 1.75rem 4rem; }
     .hero-card { max-width: 100%; }
 
@@ -739,7 +837,7 @@
     .packages-cta-block { padding: 2.5rem 2rem; }
 
     .info { grid-template-columns: 1fr; padding: 5rem 1.75rem; gap: 2.5rem; }
-    .info-map-placeholder { position: static; }
+    .info-map { position: static; height: 260px; }
 
     footer { flex-direction: column; gap: 1.5rem; padding: 2.5rem 1.75rem; text-align: center; }
     .footer-right { text-align: center; }
@@ -750,7 +848,7 @@
 
 <!-- NAV -->
 <nav>
-  <a href="#" class="nav-brand">Integral Therapeutics</a>
+  <a href="#" class="nav-brand"><span class="logo-mark nav-logo" role="img" aria-label="Integral Therapeutics logo"></span>Integral Therapeutics</a>
   <ul class="nav-links">
     <li><a href="#philosophy">About</a></li>
     <li><a href="#services">Services</a></li>
@@ -773,11 +871,13 @@
     <ellipse cx="100" cy="150" rx="40" ry="90" fill="var(--gold)" opacity="0.5" transform="rotate(-40 100 150)"/>
     <ellipse cx="200" cy="150" rx="40" ry="90" fill="var(--gold)" opacity="0.5" transform="rotate(40 200 150)"/>
   </svg>
-
   <div class="hero-content">
     <p class="hero-eyebrow">Serving South Florida · Greater Miami Area</p>
-    <h1 class="hero-title">Heal from<br><em>within.</em><br>Align with<br>gravity.</h1>
-    <p class="hero-subtitle">Personalized structural therapy, Gonstead chiropractic, and ancient healing traditions — integrated for your body's natural path to wellness.</p>
+    <div class="hero-brand-row">
+      <div class="hero-logo" role="img" aria-label="Integral Therapeutics logo"></div>
+      <h1 class="hero-title">Heal from <em>Within</em><br>Align with gravity.</h1>
+    </div>
+    <p class="hero-subtitle">Structural integration, corrective therapy, and ancient healing modalities — care that fits your needs, integrated for your body's natural path to well-being.</p>
     <div class="hero-actions">
       <a href="tel:+17865473742" class="btn-primary">Call to Book</a>
       <a href="#services" class="btn-ghost">Explore Services ↓</a>
@@ -788,21 +888,24 @@
     <div class="hero-card">
       <p class="hero-card-label">Current Offerings</p>
       <div class="service-tags">
-        <span class="service-tag">Gonstead Chiropractic</span>
-        <span class="service-tag">Structural Integration</span>
+        <span class="service-tag">Structural Correction</span>
+        <span class="service-tag">Myofascial &amp; Structural Integration</span>
+        <span class="service-tag">Neuromuscular Facilitation/Re-education</span>
+        <span class="service-tag">Mesentery &amp; General Abdominal Massage</span>
+        <span class="service-tag">Craniosacral Massage</span>
+        <span class="service-tag">Acupressure Massage</span>
         <span class="service-tag">Fire Cupping</span>
+        <span class="service-tag">Energy Work</span>
         <span class="service-tag">Pranic Healing</span>
         <span class="service-tag">Medical Qi Gong</span>
-        <span class="service-tag">Craniosacral</span>
-        <span class="service-tag">Acupressure</span>
       </div>
       <div class="hero-card-divider"></div>
       <div class="hero-info-row">
         <div class="hero-info-item">
           <span class="hero-info-icon">◷</span>
           <div class="hero-info-text">
-            <strong>Tue – Sat, 11am – 7pm</strong>
-            By appointment
+            <strong>Wed – Sat, 10am – 5pm</strong>
+            By appointment only
           </div>
         </div>
         <div class="hero-info-item">
@@ -826,129 +929,82 @@
 
 <!-- PHILOSOPHY -->
 <section class="philosophy" id="philosophy">
-  <div>
+  <div class="reveal">
     <p class="section-label">Our Philosophy</p>
     <h2 class="section-title">True health<br>comes from<br><em>harmony.</em></h2>
   </div>
-  <div class="philosophy-body">
+  <div class="philosophy-body reveal">
     <p>At Integral Therapeutics, we believe <strong>true health comes from harmony with gravity, stemming from a stable foundation in the spine.</strong> We provide a calm, supportive, and empathic environment where you can receive high quality therapy that will align your body to increase your natural state of well-being.</p>
-    <p>Through personalized care and time-honored therapeutic techniques, we focus on addressing the root causes of discomfort while supporting the body's natural ability to heal. Our services combine traditional therapeutic practices with a modern understanding of your body to provide holistic wellness.</p>
+    <p>Through time-honored therapeutic techniques within the frame of your needs, we focus on addressing the root causes of malfunction while supporting the body's natural ability to heal. Our services combine traditional therapeutic practices with a modern understanding of your body to provide holistic wellness.</p>
     <p>Whether you are seeking relief from chronic tension, recovering from physical strain, or simply looking to maintain your health and well-being, our clinic is here to help.</p>
     <div class="philosophy-accent">
-      <p>"We are thrilled to be an integral part of maintaining your wellness."</p>
+      <p>"We are thrilled to be an integral part of maintaining your well-being!"</p>
     </div>
   </div>
 </section>
 
 <!-- SERVICES -->
 <section class="services" id="services">
-  <div class="services-header">
+  <div class="services-header reveal">
     <div>
       <p class="section-label">What We Offer</p>
       <h2 class="section-title">Current<br><em>Offerings</em></h2>
     </div>
-    <p class="services-note">Each session is tailored to your individual needs and condition.</p>
   </div>
 
   <div class="services-grid">
 
     <!-- Chiropractic -->
-    <div class="service-card">
+    <div class="service-card reveal">
       <span class="service-card-icon"></span>
-      <h3 class="service-card-name">Gonstead Chiropractic</h3>
-      <p class="service-card-modality">Structural Correction</p>
-      <div class="service-tag-row">
-        <span class="mini-tag">Examination</span>
-        <span class="mini-tag">Corrective Manipulation</span>
-        <span class="mini-tag">Aftercare Exercises</span>
-      </div>
-      <p class="service-card-desc">A structured, three-part process of examination, corrective manipulation, and aftercare. Gait, static and kinetic palpation are assessed to identify subluxations — misaligned or dysfunctional joints — before precise adjustments restore proper motion and alignment.</p>
-      <div class="service-card-price">
-        <div>
-          <div class="price-amount">$108</div>
-          <div class="price-detail">Initial appointment</div>
-        </div>
-        <div style="width:1px;height:36px;background:rgba(184,146,58,0.2);"></div>
-        <div>
-          <div class="price-amount">$81</div>
-          <div class="price-detail">Each subsequent visit</div>
-        </div>
+      <h3 class="service-card-name">Structural Correction</h3>
+      <p class="service-card-desc">A structured, three-part process of examination, postural correction, and aftercare. Gait, static and kinetic palpation are assessed to identify misalignment, precise corrections to posture and alignment.</p>
+      <div class="service-card-cta">
+        <a href="sms:+17865473742" class="book-btn"><span class="book-icon">📖</span>Book</a>
       </div>
     </div>
 
     <!-- Massage -->
-    <div class="service-card">
+    <div class="service-card reveal">
       <span class="service-card-icon"></span>
       <h3 class="service-card-name">Massage Therapy</h3>
-      <p class="service-card-modality">Structural Integration (Rolfing)</p>
-      <div class="service-tag-row">
-        <span class="mini-tag">Myofascial Release</span>
-        <span class="mini-tag">Acupressure</span>
-        <span class="mini-tag">Craniosacral</span>
-        <span class="mini-tag">Trigger Point</span>
-      </div>
-      <p class="service-card-desc">A myofascial approach focused on improving the body's structural alignment and functional balance. Sessions address joints, ligaments, tendons, muscles, and fascial adhesions — tailored with complementary techniques to each patient's individual needs.</p>
-      <div class="service-card-price">
-        <div>
-          <div class="price-amount">$216</div>
-          <div class="price-detail">Per session<br>(90 min min. · $144/hr)</div>
-        </div>
+      <p class="service-card-desc">A myofascial approach focused on improving the body's structural alignment and functional balance. This method will address the dysfunction of joints, ligaments, tendons, muscles, and fascial adhesions — the therapy may include other massage techniques that complement the individual needs of each patient.</p>
+      <div class="service-card-cta">
+        <a href="sms:+17865473742" class="book-btn"><span class="book-icon">📖</span>Book</a>
       </div>
     </div>
 
     <!-- Cupping -->
-    <div class="service-card">
+    <div class="service-card reveal">
       <span class="service-card-icon"></span>
       <h3 class="service-card-name">Fire Cupping</h3>
-      <p class="service-card-modality">Traditional Chinese Medicine</p>
-      <div class="service-tag-row">
-        <span class="mini-tag">Glass Cups</span>
-        <span class="mini-tag">Cup Gliding</span>
-        <span class="mini-tag">Meridian Pathways</span>
-      </div>
       <p class="service-card-desc">Performed according to TCM meridian pathways. A gentle flame creates therapeutic vacuum inside glass cups, placed on areas of pain or stagnation. The suction lifts skin, fascia, and muscles — drawing stagnant blood and metabolic waste toward the surface and supporting the body's natural healing response.</p>
-      <div class="service-card-price">
-        <div>
-          <div class="price-amount">$81</div>
-          <div class="price-detail">45 min standalone session</div>
-        </div>
-        <div style="width:1px;height:36px;background:rgba(184,146,58,0.2);"></div>
-        <div>
-          <div class="price-amount">$50</div>
-          <div class="price-detail">Add-on to<br>90-min massage</div>
-        </div>
+      <div class="service-card-cta">
+        <a href="sms:+17865473742" class="book-btn"><span class="book-icon">📖</span>Book</a>
       </div>
     </div>
 
     <!-- Energy Work -->
-    <div class="service-card">
+    <div class="service-card reveal">
       <span class="service-card-icon"></span>
       <h3 class="service-card-name">Energy Work</h3>
-      <p class="service-card-modality">Pranic Healing · Medical Qi Gong</p>
-      <div class="service-tag-row">
-        <span class="mini-tag">Aura Cleansing</span>
-        <span class="mini-tag">Chakra Work</span>
-        <span class="mini-tag">Organ Qi Healing</span>
-        <span class="mini-tag">Intention Implantation</span>
-      </div>
       <p class="service-card-desc">Integrated within the treatment process — general cleansing and maintenance of the aura, specific cleansing and re-energizing of the chakras, chord cutting, memory disintegration, intention implantation, and organ qi healing. Designed to support overall energetic balance and enhance well-being.</p>
-      <div class="service-card-price">
-        <div>
-          <div class="price-amount">$108</div>
-          <div class="price-detail">Per 45-min session</div>
-        </div>
+      <div class="service-card-cta">
+        <a href="sms:+17865473742" class="book-btn"><span class="book-icon">📖</span>Book</a>
       </div>
     </div>
 
   </div>
+
+  <p class="services-contact reveal"><a href="sms:+17865473742">Text us</a> for more information.</p>
 </section>
 
 <!-- PACKAGES -->
 <section class="packages">
   <p class="section-label">Continued Care</p>
   <h2 class="section-title">Package Deals</h2>
-  <p class="packages-sub">If you enjoy your experience at Integral Therapeutics after your first appointment and need further care, ask about our discounted packages for continued treatment.</p>
-  <div class="packages-cta-block">
+  <p class="packages-sub reveal">If you enjoy your experience at Integral Therapeutics after your first appointment and need further care, ask about our discounted packages for continued treatment.</p>
+  <div class="packages-cta-block reveal">
     <p>Ready to begin? Call, text, or WhatsApp us to schedule your consultation and ask about package pricing for ongoing care.</p>
     <a href="tel:+17865473742" class="btn-primary">+1 (786) 547-3742</a>
     <p style="font-size:0.75rem;color:rgba(247,243,236,0.35);margin-top:0.25rem;">Call · Text · WhatsApp</p>
@@ -957,16 +1013,16 @@
 
 <!-- INFO -->
 <section class="info" id="info">
-  <div>
+  <div class="reveal">
     <p class="section-label">Find Us</p>
     <h2 class="section-title" style="margin-bottom:3rem;">Visit the<br><em>Clinic</em></h2>
 
     <div class="info-block">
       <p class="info-block-label">Hours of Operation</p>
       <div class="info-block-content">
-        Tuesday – Saturday<br>
-        11:00 AM – 7:00 PM<br>
-        <span style="font-size:0.8rem;color:var(--text-light);">By appointment only</span>
+        Wednesday – Saturday<br>
+        10:00 AM – 5:00 PM<br>
+        <span style="font-size:0.8rem;color:var(--text-light);">By appointment only · Closed Sunday – Tuesday</span>
       </div>
     </div>
 
@@ -974,37 +1030,60 @@
       <p class="info-block-label">Address</p>
       <div class="info-block-content">
         South Florida · Greater Miami Area<br>
-        <span style="font-size:0.8rem;color:var(--text-light);">Location provided upon booking</span>
+        <span style="font-size:0.8rem;color:var(--text-light);">Location provided when appointment is made</span>
       </div>
     </div>
 
     <div class="info-block">
-      <p class="info-block-label">Consultation & Booking</p>
+      <p class="info-block-label">Complimentary Phone Consultation, Pricing, &amp; Booking</p>
       <div class="info-block-content">
         <a href="tel:+17865473742">+1 (786) 547-3742</a><br>
-        <span style="font-size:0.8rem;color:var(--text-light);">Call, text, or WhatsApp</span>
+        <span style="font-size:0.8rem;color:var(--text-light);">Call, text, or WhatsApp</span><br>
+        <span style="font-family:'Cormorant Garamond',serif;font-size:1.15rem;font-style:italic;color:var(--teal-deep);">Call us today!</span>
       </div>
     </div>
   </div>
 
-  <div class="info-map-placeholder">
+  <div class="info-map reveal">
     <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
     <span>South Florida</span>
-    <small>Serving the Greater Miami Area<br>Location provided upon booking</small>
+    <small>Serving the Greater Miami Area<br>Location provided when appointment is made</small>
   </div>
 </section>
 
 <!-- FOOTER -->
 <footer>
+  <div style="display:flex;align-items:center;gap:1rem;">
+  <span class="logo-mark footer-logo" role="img" aria-label="Integral Therapeutics logo"></span>
   <div class="footer-brand">
     Integral Therapeutics
-    <span>Tor-Spencer · South Florida</span>
+    <span>South Florida · Greater Miami Area</span>
+  </div>
   </div>
   <div class="footer-right">
-    Tue – Sat · 11am – 7pm<br>
+    Wed – Sat · 10am – 5pm · By appointment<br>
     +1 (786) 547-3742
   </div>
 </footer>
 
+<noscript><style>.reveal { opacity: 1; }</style></noscript>
+<script>
+  (function () {
+    var els = document.querySelectorAll('.reveal');
+    if (!('IntersectionObserver' in window)) {
+      els.forEach ? els.forEach(function (el) { el.classList.add('visible'); }) : null;
+      return;
+    }
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -48px 0px' });
+    els.forEach(function (el) { io.observe(el); });
+  })();
+</script>
 </body>
 </html>
